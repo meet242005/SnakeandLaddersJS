@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Snake and Ladders</title>
+    <link rel="stylesheet" href="style2.css">
+
+    <div class="header">
+        <h4>Snake and Ladders</h4>
+    
+    </div> 
+</head>
+
+
+<body onload="setplayer()" height="100%">
+
+
+
+    <div class="start">
+        <form name="playerdata">
+            <table border=0 width="100%">
+            <tr align="center">
+                <td><b>Enter Player 1 Name:</b></td>
+                <td><input type="text" name="player1"><br></td>
+            </tr>
+            <tr align="center">
+                <td><b>Enter Player 2 Name:</b></td>
+                <td><input type="text" name="player2"><br></td>
+            </tr>
+            <tr align="center">
+                <td><b>Enter Player 3 Name:</b></td>
+                <td><input type="text" name="player3"><br></td>
+            </tr>
+            <tr align="center">
+                <td><b>Enter Player 4 Name:</b></td>
+                <td><input type="text" name="player4"><br></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><input type="button" class="button1" value="Start Playing" onclick="setdata()"></td>
+                
+            </tr>
+  
+           
+            
+            </table>
+        </form>
+    </div>
+    <script>
+        function setdata() {
+            with (document.forms.playerdata) {
+                if(player1.value!=""&&player2.value!=""&&player3.value!=""&&player4.value!="")
+                {
+                document.cookie = "p1=" + player1.value + ",p2=" + player2.value + ",p3=" +player3.value + ",p4=" + player4.value+ ";";
+                window.open("/snakeladder.html")
+                }else{
+                    alert("Enter All The Names")
+                }
+            }
+        }
+    </script>
+
+
+</body>
+<footer>
+    <div class="footer"  align="center"> 
+            
+        <h5>TYCO 1 - GROUP 5 - 2022-23 CSS MICROPROJECT</h5>
+        
+</div>
+</footer>
+
+</html>
